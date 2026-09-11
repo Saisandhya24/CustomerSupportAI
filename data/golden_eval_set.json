@@ -1,0 +1,2002 @@
+[
+  {
+    "id": "EVAL_BAT_001",
+    "tweet_text": "@AppleSupport Battery health dropped from 99% to 88% in 3 weeks after updating. Is this normal?",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Standard battery health diagnostic inquiry; non-urgent hardware issue.",
+    "reference_resolution": "Battery degradation can vary based on usage and charging patterns. You can review battery health in Settings > Battery > Battery Health. If capacity falls below 80% during warranty, service is covered.",
+    "difficulty": "simple",
+    "human_quality_score": 4.8
+  },
+  {
+    "id": "EVAL_BAT_002",
+    "tweet_text": "@AppleSupport My phone melted its charging port while plugged in overnight! The wire was smoking!!",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Severe safety hazard (hardware melting/smoke) requires immediate human safety protocol escalation.",
+    "reference_resolution": "We take safety matters very seriously. Please disconnect the charger immediately and do not attempt to power on the device. We are escalating your case to our Senior Safety Specialists.",
+    "difficulty": "frustrated",
+    "human_quality_score": 5.0
+  },
+  {
+    "id": "EVAL_BAT_003",
+    "tweet_text": "@AppleSupport screen on iPhone 12 turned completely green after dropping in water. Touch screen unresponsive.",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Physical/water damage hardware repair request needing store appointment/mail-in repair.",
+    "reference_resolution": "Water resistance can decrease over time and liquid damage is not covered under standard warranty. Please visit an Apple Authorized Service Provider or schedule a store visit at apple.co/RepairStore",
+    "difficulty": "simple",
+    "human_quality_score": 4.5
+  },
+  {
+    "id": "EVAL_BAT_004",
+    "tweet_text": "@AppleSupport battery drains 50% overnight with zero apps open in background. iOS 17.3.",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Standard software/battery drain query resolved via diagnostic steps.",
+    "reference_resolution": "Background indexing after an update can temporarily affect battery life. Check Settings > Battery to see active background processes or toggle Low Power Mode.",
+    "difficulty": "simple",
+    "human_quality_score": 4.2
+  },
+  {
+    "id": "EVAL_BAT_005",
+    "tweet_text": "@AppleSupport Is fast charging bad for long term battery health on iPhone 15 Pro?",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "General informational hardware question.",
+    "reference_resolution": "Apple lithium-ion batteries use fast charging to reach 80% capacity quickly, then switch to slower trickle charging to extend battery lifespan. Learn more at apple.co/Batteries",
+    "difficulty": "simple",
+    "human_quality_score": 4.9
+  },
+  {
+    "id": "EVAL_SW_001",
+    "tweet_text": "@AppleSupport iOS 17 update crashed mid-way and now shows a black screen with support.apple.com/iphone/restore",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Standard recovery mode issue with clear official resolution URL.",
+    "reference_resolution": "Your iPhone is in Recovery Mode. Connect your device to a computer via cable, open Finder or iTunes, and choose 'Update' to reinstall iOS without erasing data. Guide: apple.co/RestoreRecovery",
+    "difficulty": "simple",
+    "human_quality_score": 4.7
+  },
+  {
+    "id": "EVAL_SW_002",
+    "tweet_text": "@AppleSupport Camera app is completely black when I open it, but flash works. Restarting didn't fix it.",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Software/camera app glitch troubleshooting step.",
+    "reference_resolution": "Make sure no app is locking the camera in the background. Try closing all apps and force restarting your iPhone. If the black screen persists, contact support for a diagnostic check.",
+    "difficulty": "simple",
+    "human_quality_score": 4.1
+  },
+  {
+    "id": "EVAL_SW_003",
+    "tweet_text": "@AppleSupport YOUR NEW UPDATE RUINED MY PHONE!! Screen is lagging and freezing every 5 seconds! Fix this now or I'm switching to Samsung!",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "High customer frustration/churn risk requires empathetic human advisor handoff.",
+    "reference_resolution": "We understand how frustrating performance issues are and we want to help make this right. Please DM us your iOS version and device model so an advisor can investigate.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.6
+  },
+  {
+    "id": "EVAL_SW_004",
+    "tweet_text": "@AppleSupport Siri stops listening halfway through my sentences since updating to iOS 17.2.",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Software setting configuration issue.",
+    "reference_resolution": "Try resetting Siri by going to Settings > Siri & Search, toggling off 'Listen for Hey Siri', restarting your device, and turning it back on.",
+    "difficulty": "simple",
+    "human_quality_score": 4.3
+  },
+  {
+    "id": "EVAL_SW_005",
+    "tweet_text": "@AppleSupport Bluetooth keeps turning off by itself when I lock my phone. Software bug?",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Software settings/troubleshooting inquiry.",
+    "reference_resolution": "Check if any Focus mode or power-saving profile is managing your Bluetooth connections in Settings > Focus.",
+    "difficulty": "simple",
+    "human_quality_score": 4.0
+  },
+  {
+    "id": "EVAL_ACC_001",
+    "tweet_text": "@AppleSupport Someone hacked my Apple ID and changed the recovery email address! I'm locked out of everything!",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Account compromise/security breach requiring strict human verification and security team intervention.",
+    "reference_resolution": "We treat account security with the highest urgency. Please visit iforgot.apple.com immediately or call our security hotline at 1-800-MY-APPLE for immediate account lock verification.",
+    "difficulty": "adversarial",
+    "human_quality_score": 5.0
+  },
+  {
+    "id": "EVAL_ACC_002",
+    "tweet_text": "@AppleSupport I forgot my passcode and my iPhone is disabled. How do I get back in?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Standard passcode lockout resolution via recovery restore.",
+    "reference_resolution": "If you forgot your passcode, you will need to erase your iPhone using a computer or Find My to reset it. Follow the steps at apple.co/PasscodeReset",
+    "difficulty": "simple",
+    "human_quality_score": 4.8
+  },
+  {
+    "id": "EVAL_ACC_003",
+    "tweet_text": "@AppleSupport How do I remove an old device from my Apple ID account trusted devices list?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Standard account device management guidance.",
+    "reference_resolution": "Sign in at appleid.apple.com or go to Settings > [Your Name] on your iPhone, tap the device you wish to remove, and select 'Remove from Account'.",
+    "difficulty": "simple",
+    "human_quality_score": 4.9
+  },
+  {
+    "id": "EVAL_ACC_004",
+    "tweet_text": "@AppleSupport Not receiving 2FA SMS code to log into iCloud on my web browser.",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "2FA fallback verification instructions.",
+    "reference_resolution": "If SMS codes aren't arriving, check your cellular connection or generate a code offline on a trusted Apple device in Settings > [Your Name] > Password & Security.",
+    "difficulty": "simple",
+    "human_quality_score": 4.4
+  },
+  {
+    "id": "EVAL_ICL_001",
+    "tweet_text": "@AppleSupport I paid for 200GB iCloud storage plan but my phone still says 'Storage Almost Full'!",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Clarification between local device storage vs. cloud storage.",
+    "reference_resolution": "iCloud storage expands your cloud backup space, but does not increase physical device storage capacity. You can check local storage usage in Settings > General > iPhone Storage.",
+    "difficulty": "simple",
+    "human_quality_score": 4.7
+  },
+  {
+    "id": "EVAL_ICL_002",
+    "tweet_text": "@AppleSupport All my family photos from 2018 disappeared from iCloud after signing out and back in!",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Potential data loss panic inquiry; requires human support reassurance and database log review.",
+    "reference_resolution": "Don't worry, your photos are likely still stored safely in the cloud. Ensure 'iCloud Photos' is toggled ON in Settings > Photos. Send us a DM if photos do not begin syncing.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.6
+  },
+  {
+    "id": "EVAL_ICL_003",
+    "tweet_text": "@AppleSupport How do I share an iCloud Photo Album with a non-Apple user?",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Feature inquiry for Public Web Link sharing.",
+    "reference_resolution": "You can share a Shared Album with anyone by turning on 'Public Website' in the album settings, which creates a web link accessible on any web browser.",
+    "difficulty": "simple",
+    "human_quality_score": 4.8
+  },
+  {
+    "id": "EVAL_APP_001",
+    "tweet_text": "@AppleSupport I was billed \\$14.99 for a subscription I cancelled 3 days ago. I want a refund now!",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Self-service refund portal guidance.",
+    "reference_resolution": "You can submit a refund request directly at reportaproblem.apple.com. Log in with your Apple ID, find the charge, and select 'Request a refund'.",
+    "difficulty": "simple",
+    "human_quality_score": 4.6
+  },
+  {
+    "id": "EVAL_APP_002",
+    "tweet_text": "@AppleSupport Why is my payment method declined in App Store when I have plenty of funds?",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Payment authorization / billing block issue requiring account check.",
+    "reference_resolution": "Payment declination can occur due to bank verification or unpaid balances. Please verify billing details in Settings > [Your Name] > Media & Purchases, or DM us for billing verification.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.3
+  },
+  {
+    "id": "EVAL_APP_003",
+    "tweet_text": "@AppleSupport My child made 12 unauthorized purchases in Roblox totaling \\$300 without my consent!",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "High-value disputed charge / parental control issue requiring human billing review.",
+    "reference_resolution": "We understand how concerning this is. Please visit reportaproblem.apple.com to request refunds for all unauthorized items. To prevent future purchases, enable Screen Time restrictions: apple.co/InAppRestrictions",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.8
+  },
+  {
+    "id": "EVAL_DEV_001",
+    "tweet_text": "@AppleSupport My AirPods Pro crackle whenever transparency mode or noise cancellation is turned on.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Standard service program hardware troubleshooting.",
+    "reference_resolution": "Ensure your AirPods firmware and connected device software are up to date. Clean the mesh grilles gently. If static persists, your AirPods may qualify for our service program: apple.co/AirPodsProService",
+    "difficulty": "simple",
+    "human_quality_score": 4.7
+  },
+  {
+    "id": "EVAL_DEV_002",
+    "tweet_text": "@AppleSupport AirDrop fails every time I try to send photos from iPhone to Mac. Both are on same Wi-Fi.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Standard AirDrop connectivity troubleshooting.",
+    "reference_resolution": "Make sure both Bluetooth and Wi-Fi are active on both devices, and set AirDrop visibility to 'Everyone for 10 Minutes' in Control Center.",
+    "difficulty": "simple",
+    "human_quality_score": 4.5
+  },
+  {
+    "id": "EVAL_DEV_003",
+    "tweet_text": "@AppleSupport My phone is completely frozen and won't turn off. Power button doesn't do anything!",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Force restart procedure.",
+    "reference_resolution": "Perform a force restart: press and quickly release Volume Up, press and quickly release Volume Down, then hold the Side Button until the Apple logo appears.",
+    "difficulty": "simple",
+    "human_quality_score": 4.9
+  },
+  {
+    "id": "EVAL_DEV_004",
+    "tweet_text": "@AppleSupport Wi-Fi button is greyed out in settings and won't toggle on at all.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Hardware Wi-Fi chip failure indicator needing physical store diagnostic.",
+    "reference_resolution": "A greyed-out Wi-Fi setting often points to a hardware component requirement. Try resetting Network Settings first. If unchanged, please schedule a store inspection: apple.co/RepairAppointment",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.4
+  },
+  {
+    "id": "EVAL_DEV_005",
+    "tweet_text": "@AppleSupport Apple Watch heart rate monitor stopped tracking during workouts after swimming.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Water lock & sensor cleaning guidance.",
+    "reference_resolution": "Make sure Water Lock is disabled by pressing and holding the Digital Crown, and clean the back crystal sensor with a microfiber cloth.",
+    "difficulty": "simple",
+    "human_quality_score": 4.6
+  },
+  {
+    "id": "EVAL_GEN_026",
+    "tweet_text": "Hey @AppleSupport Phone feels like a heater when playing games and charging at the same time. Is this safe?",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Thermal query while charging.",
+    "reference_resolution": "Gaming while fast-charging creates normal thermal buildup. Disconnect charger to cool down.",
+    "difficulty": "simple",
+    "human_quality_score": 5.0
+  },
+  {
+    "id": "EVAL_GEN_027",
+    "tweet_text": "@AppleSupport quick question: Battery indicator jumps from 40% to 1% and shuts down instantly! HELP!",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Hardware power calibration anomaly.",
+    "reference_resolution": "Unexpected shutdowns warrant a hardware battery diagnostic at an Apple Store.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.6
+  },
+  {
+    "id": "EVAL_GEN_028",
+    "tweet_text": "@AppleSupport help! Wireless charging pad stopped working with my MagSafe case yesterday.",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "MagSafe accessory check.",
+    "reference_resolution": "Ensure your case is MagSafe certified and remove any metal rings or credit cards between phone and charger.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.2
+  },
+  {
+    "id": "EVAL_GEN_029",
+    "tweet_text": "@AppleSupport App icons missing after iOS update! How do I restore them?",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "UI indexing post-update.",
+    "reference_resolution": "Swipe left to the App Library to relocate missing apps or reset Home Screen Layout in Settings.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.9
+  },
+  {
+    "id": "EVAL_GEN_030",
+    "tweet_text": "Ugh @AppleSupport Screen freeze on incoming calls, can't tap accept or decline!",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Critical telephony bug interrupting incoming calls.",
+    "reference_resolution": "We apologize for the call freeze. Please force restart your iPhone and DM us if issue persists.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.5
+  },
+  {
+    "id": "EVAL_GEN_031",
+    "tweet_text": "Hey @AppleSupport Safari crashes whenever I open more than 3 tabs on my iPad.",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Safari browser crash fix.",
+    "reference_resolution": "Clear Safari cache in Settings > Safari > Clear History and Website Data, then restart.",
+    "difficulty": "simple",
+    "human_quality_score": 4.1
+  },
+  {
+    "id": "EVAL_GEN_032",
+    "tweet_text": "@AppleSupport quick question: Storage filled up with 40GB of 'System Data' after updating!",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "System data storage bug.",
+    "reference_resolution": "Connect device to Mac/PC via cable to let system caches re-index and free System Data space.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.8
+  },
+  {
+    "id": "EVAL_GEN_033",
+    "tweet_text": "@AppleSupport help! Can I change my Apple ID email address without losing my purchased apps?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Account email change guidance.",
+    "reference_resolution": "Yes! Update your primary email at appleid.apple.com. All purchases remain linked to your account.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.4
+  },
+  {
+    "id": "EVAL_GEN_034",
+    "tweet_text": "@AppleSupport Locked out of my Apple ID because my old phone number is disconnected! Help!",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Account recovery lockout with lost 2FA phone number.",
+    "reference_resolution": "Initiate Account Recovery at iforgot.apple.com to verify identity and update trusted phone number.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.0
+  },
+  {
+    "id": "EVAL_GEN_035",
+    "tweet_text": "Ugh @AppleSupport Received an email saying my Apple ID was accessed from Russia! Is this fake?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Phishing protection advice.",
+    "reference_resolution": "Do not click links in suspicious emails. Verify active logins directly at appleid.apple.com.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.7
+  },
+  {
+    "id": "EVAL_GEN_036",
+    "tweet_text": "Hey @AppleSupport How do I turn on 2FA for an older Apple ID account?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "2FA setup guidance.",
+    "reference_resolution": "Go to Settings > [Your Name] > Password & Security > Turn On Two-Factor Authentication.",
+    "difficulty": "simple",
+    "human_quality_score": 4.3
+  },
+  {
+    "id": "EVAL_GEN_037",
+    "tweet_text": "@AppleSupport quick question: iCloud Backup keeps failing every night saying 'Not Enough Storage'.",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "iCloud backup storage quota.",
+    "reference_resolution": "Manage what gets backed up under Settings > [Your Name] > iCloud > iCloud Backup > [This iPhone].",
+    "difficulty": "ambiguous",
+    "human_quality_score": 5.0
+  },
+  {
+    "id": "EVAL_GEN_038",
+    "tweet_text": "@AppleSupport help! Photos synced to iCloud are blurry on my iPhone when offline.",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Optimize iPhone Storage behavior.",
+    "reference_resolution": "Turn on 'Download and Keep Originals' in Settings > Photos to store full resolution photos locally.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.6
+  },
+  {
+    "id": "EVAL_GEN_039",
+    "tweet_text": "@AppleSupport Can I share 200GB iCloud storage with my spouse?",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Family Sharing iCloud quota.",
+    "reference_resolution": "Yes! Set up Family Sharing in Settings > [Your Name] > Family Sharing and invite your spouse.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.2
+  },
+  {
+    "id": "EVAL_GEN_040",
+    "tweet_text": "Ugh @AppleSupport In-app purchase didn't show up in my game but card was charged \\$19.99!",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Failed digital purchase entitlement needing receipt validation.",
+    "reference_resolution": "Tap 'Restore Purchases' inside the app menu. If missing, report the issue at reportaproblem.apple.com",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.9
+  },
+  {
+    "id": "EVAL_GEN_041",
+    "tweet_text": "Hey @AppleSupport How do I cancel my Apple TV+ subscription trial before it charges me?",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Subscription cancellation self-service.",
+    "reference_resolution": "Go to Settings > [Your Name] > Subscriptions > Apple TV+ > Cancel Subscription.",
+    "difficulty": "simple",
+    "human_quality_score": 4.5
+  },
+  {
+    "id": "EVAL_GEN_042",
+    "tweet_text": "@AppleSupport quick question: Unrecognized \\$4.99 recurring charge on my bank statement every month from Apple.",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Subscription lookup.",
+    "reference_resolution": "Check active subscriptions at reportaproblem.apple.com or Settings > [Your Name] > Subscriptions.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.1
+  },
+  {
+    "id": "EVAL_GEN_043",
+    "tweet_text": "@AppleSupport help! My Mac speaker makes a crackling sound when playing YouTube videos.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Audio output troubleshooting.",
+    "reference_resolution": "Restart CoreAudio daemon in Terminal using `sudo killall coreaudiod` or restart your Mac.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.8
+  },
+  {
+    "id": "EVAL_GEN_044",
+    "tweet_text": "@AppleSupport iPhone microphone sounds quiet during phone calls, people can't hear me.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Microphone cleaning & case check.",
+    "reference_resolution": "Ensure your case isn't blocking the bottom microphone grille and clean gently with a dry soft brush.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.4
+  },
+  {
+    "id": "EVAL_GEN_045",
+    "tweet_text": "Ugh @AppleSupport Face ID stopped working after phone fell on carpet. Says 'Face ID Not Available'.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "TrueDepth hardware sensor damage.",
+    "reference_resolution": "Hardware TrueDepth camera failure requires an Apple Store diagnostic appointment: apple.co/RepairStore",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.0
+  },
+  {
+    "id": "EVAL_GEN_046",
+    "tweet_text": "Hey @AppleSupport AirDrop stuck on 'Waiting...' when transferring 4K video file.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "AirDrop large transfer guidance.",
+    "reference_resolution": "Keep screens awake on both devices during large file transfers and remain within Bluetooth range.",
+    "difficulty": "simple",
+    "human_quality_score": 4.7
+  },
+  {
+    "id": "EVAL_GEN_047",
+    "tweet_text": "@AppleSupport quick question: My iPhone battery health went down to 82% after 6 months. Can I get a replacement?",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Standard battery health inquiry.",
+    "reference_resolution": "If your battery drops below 80% within the 1-year warranty, Apple covers free replacement.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.3
+  },
+  {
+    "id": "EVAL_GEN_048",
+    "tweet_text": "@AppleSupport help! Phone feels like a heater when playing games and charging at the same time. Is this safe?",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Thermal query while charging.",
+    "reference_resolution": "Gaming while fast-charging creates normal thermal buildup. Disconnect charger to cool down.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 5.0
+  },
+  {
+    "id": "EVAL_GEN_049",
+    "tweet_text": "@AppleSupport Battery indicator jumps from 40% to 1% and shuts down instantly! HELP!",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Hardware power calibration anomaly.",
+    "reference_resolution": "Unexpected shutdowns warrant a hardware battery diagnostic at an Apple Store.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.6
+  },
+  {
+    "id": "EVAL_GEN_050",
+    "tweet_text": "Ugh @AppleSupport Wireless charging pad stopped working with my MagSafe case yesterday.",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "MagSafe accessory check.",
+    "reference_resolution": "Ensure your case is MagSafe certified and remove any metal rings or credit cards between phone and charger.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.2
+  },
+  {
+    "id": "EVAL_GEN_051",
+    "tweet_text": "Hey @AppleSupport App icons missing after iOS update! How do I restore them?",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "UI indexing post-update.",
+    "reference_resolution": "Swipe left to the App Library to relocate missing apps or reset Home Screen Layout in Settings.",
+    "difficulty": "simple",
+    "human_quality_score": 4.9
+  },
+  {
+    "id": "EVAL_GEN_052",
+    "tweet_text": "@AppleSupport quick question: Screen freeze on incoming calls, can't tap accept or decline!",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Critical telephony bug interrupting incoming calls.",
+    "reference_resolution": "We apologize for the call freeze. Please force restart your iPhone and DM us if issue persists.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.5
+  },
+  {
+    "id": "EVAL_GEN_053",
+    "tweet_text": "@AppleSupport help! Safari crashes whenever I open more than 3 tabs on my iPad.",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Safari browser crash fix.",
+    "reference_resolution": "Clear Safari cache in Settings > Safari > Clear History and Website Data, then restart.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.1
+  },
+  {
+    "id": "EVAL_GEN_054",
+    "tweet_text": "@AppleSupport Storage filled up with 40GB of 'System Data' after updating!",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "System data storage bug.",
+    "reference_resolution": "Connect device to Mac/PC via cable to let system caches re-index and free System Data space.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.8
+  },
+  {
+    "id": "EVAL_GEN_055",
+    "tweet_text": "Ugh @AppleSupport Can I change my Apple ID email address without losing my purchased apps?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Account email change guidance.",
+    "reference_resolution": "Yes! Update your primary email at appleid.apple.com. All purchases remain linked to your account.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.4
+  },
+  {
+    "id": "EVAL_GEN_056",
+    "tweet_text": "Hey @AppleSupport Locked out of my Apple ID because my old phone number is disconnected! Help!",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Account recovery lockout with lost 2FA phone number.",
+    "reference_resolution": "Initiate Account Recovery at iforgot.apple.com to verify identity and update trusted phone number.",
+    "difficulty": "simple",
+    "human_quality_score": 4.0
+  },
+  {
+    "id": "EVAL_GEN_057",
+    "tweet_text": "@AppleSupport quick question: Received an email saying my Apple ID was accessed from Russia! Is this fake?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Phishing protection advice.",
+    "reference_resolution": "Do not click links in suspicious emails. Verify active logins directly at appleid.apple.com.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.7
+  },
+  {
+    "id": "EVAL_GEN_058",
+    "tweet_text": "@AppleSupport help! How do I turn on 2FA for an older Apple ID account?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "2FA setup guidance.",
+    "reference_resolution": "Go to Settings > [Your Name] > Password & Security > Turn On Two-Factor Authentication.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.3
+  },
+  {
+    "id": "EVAL_GEN_059",
+    "tweet_text": "@AppleSupport iCloud Backup keeps failing every night saying 'Not Enough Storage'.",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "iCloud backup storage quota.",
+    "reference_resolution": "Manage what gets backed up under Settings > [Your Name] > iCloud > iCloud Backup > [This iPhone].",
+    "difficulty": "adversarial",
+    "human_quality_score": 5.0
+  },
+  {
+    "id": "EVAL_GEN_060",
+    "tweet_text": "Ugh @AppleSupport Photos synced to iCloud are blurry on my iPhone when offline.",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Optimize iPhone Storage behavior.",
+    "reference_resolution": "Turn on 'Download and Keep Originals' in Settings > Photos to store full resolution photos locally.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.6
+  },
+  {
+    "id": "EVAL_GEN_061",
+    "tweet_text": "Hey @AppleSupport Can I share 200GB iCloud storage with my spouse?",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Family Sharing iCloud quota.",
+    "reference_resolution": "Yes! Set up Family Sharing in Settings > [Your Name] > Family Sharing and invite your spouse.",
+    "difficulty": "simple",
+    "human_quality_score": 4.2
+  },
+  {
+    "id": "EVAL_GEN_062",
+    "tweet_text": "@AppleSupport quick question: In-app purchase didn't show up in my game but card was charged \\$19.99!",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Failed digital purchase entitlement needing receipt validation.",
+    "reference_resolution": "Tap 'Restore Purchases' inside the app menu. If missing, report the issue at reportaproblem.apple.com",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.9
+  },
+  {
+    "id": "EVAL_GEN_063",
+    "tweet_text": "@AppleSupport help! How do I cancel my Apple TV+ subscription trial before it charges me?",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Subscription cancellation self-service.",
+    "reference_resolution": "Go to Settings > [Your Name] > Subscriptions > Apple TV+ > Cancel Subscription.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.5
+  },
+  {
+    "id": "EVAL_GEN_064",
+    "tweet_text": "@AppleSupport Unrecognized \\$4.99 recurring charge on my bank statement every month from Apple.",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Subscription lookup.",
+    "reference_resolution": "Check active subscriptions at reportaproblem.apple.com or Settings > [Your Name] > Subscriptions.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.1
+  },
+  {
+    "id": "EVAL_GEN_065",
+    "tweet_text": "Ugh @AppleSupport My Mac speaker makes a crackling sound when playing YouTube videos.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Audio output troubleshooting.",
+    "reference_resolution": "Restart CoreAudio daemon in Terminal using `sudo killall coreaudiod` or restart your Mac.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.8
+  },
+  {
+    "id": "EVAL_GEN_066",
+    "tweet_text": "Hey @AppleSupport iPhone microphone sounds quiet during phone calls, people can't hear me.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Microphone cleaning & case check.",
+    "reference_resolution": "Ensure your case isn't blocking the bottom microphone grille and clean gently with a dry soft brush.",
+    "difficulty": "simple",
+    "human_quality_score": 4.4
+  },
+  {
+    "id": "EVAL_GEN_067",
+    "tweet_text": "@AppleSupport quick question: Face ID stopped working after phone fell on carpet. Says 'Face ID Not Available'.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "TrueDepth hardware sensor damage.",
+    "reference_resolution": "Hardware TrueDepth camera failure requires an Apple Store diagnostic appointment: apple.co/RepairStore",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.0
+  },
+  {
+    "id": "EVAL_GEN_068",
+    "tweet_text": "@AppleSupport help! AirDrop stuck on 'Waiting...' when transferring 4K video file.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "AirDrop large transfer guidance.",
+    "reference_resolution": "Keep screens awake on both devices during large file transfers and remain within Bluetooth range.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.7
+  },
+  {
+    "id": "EVAL_GEN_069",
+    "tweet_text": "@AppleSupport My iPhone battery health went down to 82% after 6 months. Can I get a replacement?",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Standard battery health inquiry.",
+    "reference_resolution": "If your battery drops below 80% within the 1-year warranty, Apple covers free replacement.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.3
+  },
+  {
+    "id": "EVAL_GEN_070",
+    "tweet_text": "Ugh @AppleSupport Phone feels like a heater when playing games and charging at the same time. Is this safe?",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Thermal query while charging.",
+    "reference_resolution": "Gaming while fast-charging creates normal thermal buildup. Disconnect charger to cool down.",
+    "difficulty": "frustrated",
+    "human_quality_score": 5.0
+  },
+  {
+    "id": "EVAL_GEN_071",
+    "tweet_text": "Hey @AppleSupport Battery indicator jumps from 40% to 1% and shuts down instantly! HELP!",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Hardware power calibration anomaly.",
+    "reference_resolution": "Unexpected shutdowns warrant a hardware battery diagnostic at an Apple Store.",
+    "difficulty": "simple",
+    "human_quality_score": 4.6
+  },
+  {
+    "id": "EVAL_GEN_072",
+    "tweet_text": "@AppleSupport quick question: Wireless charging pad stopped working with my MagSafe case yesterday.",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "MagSafe accessory check.",
+    "reference_resolution": "Ensure your case is MagSafe certified and remove any metal rings or credit cards between phone and charger.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.2
+  },
+  {
+    "id": "EVAL_GEN_073",
+    "tweet_text": "@AppleSupport help! App icons missing after iOS update! How do I restore them?",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "UI indexing post-update.",
+    "reference_resolution": "Swipe left to the App Library to relocate missing apps or reset Home Screen Layout in Settings.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.9
+  },
+  {
+    "id": "EVAL_GEN_074",
+    "tweet_text": "@AppleSupport Screen freeze on incoming calls, can't tap accept or decline!",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Critical telephony bug interrupting incoming calls.",
+    "reference_resolution": "We apologize for the call freeze. Please force restart your iPhone and DM us if issue persists.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.5
+  },
+  {
+    "id": "EVAL_GEN_075",
+    "tweet_text": "Ugh @AppleSupport Safari crashes whenever I open more than 3 tabs on my iPad.",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Safari browser crash fix.",
+    "reference_resolution": "Clear Safari cache in Settings > Safari > Clear History and Website Data, then restart.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.1
+  },
+  {
+    "id": "EVAL_GEN_076",
+    "tweet_text": "Hey @AppleSupport Storage filled up with 40GB of 'System Data' after updating!",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "System data storage bug.",
+    "reference_resolution": "Connect device to Mac/PC via cable to let system caches re-index and free System Data space.",
+    "difficulty": "simple",
+    "human_quality_score": 4.8
+  },
+  {
+    "id": "EVAL_GEN_077",
+    "tweet_text": "@AppleSupport quick question: Can I change my Apple ID email address without losing my purchased apps?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Account email change guidance.",
+    "reference_resolution": "Yes! Update your primary email at appleid.apple.com. All purchases remain linked to your account.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.4
+  },
+  {
+    "id": "EVAL_GEN_078",
+    "tweet_text": "@AppleSupport help! Locked out of my Apple ID because my old phone number is disconnected! Help!",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Account recovery lockout with lost 2FA phone number.",
+    "reference_resolution": "Initiate Account Recovery at iforgot.apple.com to verify identity and update trusted phone number.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.0
+  },
+  {
+    "id": "EVAL_GEN_079",
+    "tweet_text": "@AppleSupport Received an email saying my Apple ID was accessed from Russia! Is this fake?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Phishing protection advice.",
+    "reference_resolution": "Do not click links in suspicious emails. Verify active logins directly at appleid.apple.com.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.7
+  },
+  {
+    "id": "EVAL_GEN_080",
+    "tweet_text": "Ugh @AppleSupport How do I turn on 2FA for an older Apple ID account?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "2FA setup guidance.",
+    "reference_resolution": "Go to Settings > [Your Name] > Password & Security > Turn On Two-Factor Authentication.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.3
+  },
+  {
+    "id": "EVAL_GEN_081",
+    "tweet_text": "Hey @AppleSupport iCloud Backup keeps failing every night saying 'Not Enough Storage'.",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "iCloud backup storage quota.",
+    "reference_resolution": "Manage what gets backed up under Settings > [Your Name] > iCloud > iCloud Backup > [This iPhone].",
+    "difficulty": "simple",
+    "human_quality_score": 5.0
+  },
+  {
+    "id": "EVAL_GEN_082",
+    "tweet_text": "@AppleSupport quick question: Photos synced to iCloud are blurry on my iPhone when offline.",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Optimize iPhone Storage behavior.",
+    "reference_resolution": "Turn on 'Download and Keep Originals' in Settings > Photos to store full resolution photos locally.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.6
+  },
+  {
+    "id": "EVAL_GEN_083",
+    "tweet_text": "@AppleSupport help! Can I share 200GB iCloud storage with my spouse?",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Family Sharing iCloud quota.",
+    "reference_resolution": "Yes! Set up Family Sharing in Settings > [Your Name] > Family Sharing and invite your spouse.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.2
+  },
+  {
+    "id": "EVAL_GEN_084",
+    "tweet_text": "@AppleSupport In-app purchase didn't show up in my game but card was charged \\$19.99!",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Failed digital purchase entitlement needing receipt validation.",
+    "reference_resolution": "Tap 'Restore Purchases' inside the app menu. If missing, report the issue at reportaproblem.apple.com",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.9
+  },
+  {
+    "id": "EVAL_GEN_085",
+    "tweet_text": "Ugh @AppleSupport How do I cancel my Apple TV+ subscription trial before it charges me?",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Subscription cancellation self-service.",
+    "reference_resolution": "Go to Settings > [Your Name] > Subscriptions > Apple TV+ > Cancel Subscription.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.5
+  },
+  {
+    "id": "EVAL_GEN_086",
+    "tweet_text": "Hey @AppleSupport Unrecognized \\$4.99 recurring charge on my bank statement every month from Apple.",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Subscription lookup.",
+    "reference_resolution": "Check active subscriptions at reportaproblem.apple.com or Settings > [Your Name] > Subscriptions.",
+    "difficulty": "simple",
+    "human_quality_score": 4.1
+  },
+  {
+    "id": "EVAL_GEN_087",
+    "tweet_text": "@AppleSupport quick question: My Mac speaker makes a crackling sound when playing YouTube videos.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Audio output troubleshooting.",
+    "reference_resolution": "Restart CoreAudio daemon in Terminal using `sudo killall coreaudiod` or restart your Mac.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.8
+  },
+  {
+    "id": "EVAL_GEN_088",
+    "tweet_text": "@AppleSupport help! iPhone microphone sounds quiet during phone calls, people can't hear me.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Microphone cleaning & case check.",
+    "reference_resolution": "Ensure your case isn't blocking the bottom microphone grille and clean gently with a dry soft brush.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.4
+  },
+  {
+    "id": "EVAL_GEN_089",
+    "tweet_text": "@AppleSupport Face ID stopped working after phone fell on carpet. Says 'Face ID Not Available'.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "TrueDepth hardware sensor damage.",
+    "reference_resolution": "Hardware TrueDepth camera failure requires an Apple Store diagnostic appointment: apple.co/RepairStore",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.0
+  },
+  {
+    "id": "EVAL_GEN_090",
+    "tweet_text": "Ugh @AppleSupport AirDrop stuck on 'Waiting...' when transferring 4K video file.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "AirDrop large transfer guidance.",
+    "reference_resolution": "Keep screens awake on both devices during large file transfers and remain within Bluetooth range.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.7
+  },
+  {
+    "id": "EVAL_GEN_091",
+    "tweet_text": "Hey @AppleSupport My iPhone battery health went down to 82% after 6 months. Can I get a replacement?",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Standard battery health inquiry.",
+    "reference_resolution": "If your battery drops below 80% within the 1-year warranty, Apple covers free replacement.",
+    "difficulty": "simple",
+    "human_quality_score": 4.3
+  },
+  {
+    "id": "EVAL_GEN_092",
+    "tweet_text": "@AppleSupport quick question: Phone feels like a heater when playing games and charging at the same time. Is this safe?",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Thermal query while charging.",
+    "reference_resolution": "Gaming while fast-charging creates normal thermal buildup. Disconnect charger to cool down.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 5.0
+  },
+  {
+    "id": "EVAL_GEN_093",
+    "tweet_text": "@AppleSupport help! Battery indicator jumps from 40% to 1% and shuts down instantly! HELP!",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Hardware power calibration anomaly.",
+    "reference_resolution": "Unexpected shutdowns warrant a hardware battery diagnostic at an Apple Store.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.6
+  },
+  {
+    "id": "EVAL_GEN_094",
+    "tweet_text": "@AppleSupport Wireless charging pad stopped working with my MagSafe case yesterday.",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "MagSafe accessory check.",
+    "reference_resolution": "Ensure your case is MagSafe certified and remove any metal rings or credit cards between phone and charger.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.2
+  },
+  {
+    "id": "EVAL_GEN_095",
+    "tweet_text": "Ugh @AppleSupport App icons missing after iOS update! How do I restore them?",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "UI indexing post-update.",
+    "reference_resolution": "Swipe left to the App Library to relocate missing apps or reset Home Screen Layout in Settings.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.9
+  },
+  {
+    "id": "EVAL_GEN_096",
+    "tweet_text": "Hey @AppleSupport Screen freeze on incoming calls, can't tap accept or decline!",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Critical telephony bug interrupting incoming calls.",
+    "reference_resolution": "We apologize for the call freeze. Please force restart your iPhone and DM us if issue persists.",
+    "difficulty": "simple",
+    "human_quality_score": 4.5
+  },
+  {
+    "id": "EVAL_GEN_097",
+    "tweet_text": "@AppleSupport quick question: Safari crashes whenever I open more than 3 tabs on my iPad.",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Safari browser crash fix.",
+    "reference_resolution": "Clear Safari cache in Settings > Safari > Clear History and Website Data, then restart.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.1
+  },
+  {
+    "id": "EVAL_GEN_098",
+    "tweet_text": "@AppleSupport help! Storage filled up with 40GB of 'System Data' after updating!",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "System data storage bug.",
+    "reference_resolution": "Connect device to Mac/PC via cable to let system caches re-index and free System Data space.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.8
+  },
+  {
+    "id": "EVAL_GEN_099",
+    "tweet_text": "@AppleSupport Can I change my Apple ID email address without losing my purchased apps?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Account email change guidance.",
+    "reference_resolution": "Yes! Update your primary email at appleid.apple.com. All purchases remain linked to your account.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.4
+  },
+  {
+    "id": "EVAL_GEN_100",
+    "tweet_text": "Ugh @AppleSupport Locked out of my Apple ID because my old phone number is disconnected! Help!",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Account recovery lockout with lost 2FA phone number.",
+    "reference_resolution": "Initiate Account Recovery at iforgot.apple.com to verify identity and update trusted phone number.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.0
+  },
+  {
+    "id": "EVAL_GEN_101",
+    "tweet_text": "Hey @AppleSupport Received an email saying my Apple ID was accessed from Russia! Is this fake?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Phishing protection advice.",
+    "reference_resolution": "Do not click links in suspicious emails. Verify active logins directly at appleid.apple.com.",
+    "difficulty": "simple",
+    "human_quality_score": 4.7
+  },
+  {
+    "id": "EVAL_GEN_102",
+    "tweet_text": "@AppleSupport quick question: How do I turn on 2FA for an older Apple ID account?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "2FA setup guidance.",
+    "reference_resolution": "Go to Settings > [Your Name] > Password & Security > Turn On Two-Factor Authentication.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.3
+  },
+  {
+    "id": "EVAL_GEN_103",
+    "tweet_text": "@AppleSupport help! iCloud Backup keeps failing every night saying 'Not Enough Storage'.",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "iCloud backup storage quota.",
+    "reference_resolution": "Manage what gets backed up under Settings > [Your Name] > iCloud > iCloud Backup > [This iPhone].",
+    "difficulty": "multi_intent",
+    "human_quality_score": 5.0
+  },
+  {
+    "id": "EVAL_GEN_104",
+    "tweet_text": "@AppleSupport Photos synced to iCloud are blurry on my iPhone when offline.",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Optimize iPhone Storage behavior.",
+    "reference_resolution": "Turn on 'Download and Keep Originals' in Settings > Photos to store full resolution photos locally.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.6
+  },
+  {
+    "id": "EVAL_GEN_105",
+    "tweet_text": "Ugh @AppleSupport Can I share 200GB iCloud storage with my spouse?",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Family Sharing iCloud quota.",
+    "reference_resolution": "Yes! Set up Family Sharing in Settings > [Your Name] > Family Sharing and invite your spouse.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.2
+  },
+  {
+    "id": "EVAL_GEN_106",
+    "tweet_text": "Hey @AppleSupport In-app purchase didn't show up in my game but card was charged \\$19.99!",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Failed digital purchase entitlement needing receipt validation.",
+    "reference_resolution": "Tap 'Restore Purchases' inside the app menu. If missing, report the issue at reportaproblem.apple.com",
+    "difficulty": "simple",
+    "human_quality_score": 4.9
+  },
+  {
+    "id": "EVAL_GEN_107",
+    "tweet_text": "@AppleSupport quick question: How do I cancel my Apple TV+ subscription trial before it charges me?",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Subscription cancellation self-service.",
+    "reference_resolution": "Go to Settings > [Your Name] > Subscriptions > Apple TV+ > Cancel Subscription.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.5
+  },
+  {
+    "id": "EVAL_GEN_108",
+    "tweet_text": "@AppleSupport help! Unrecognized \\$4.99 recurring charge on my bank statement every month from Apple.",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Subscription lookup.",
+    "reference_resolution": "Check active subscriptions at reportaproblem.apple.com or Settings > [Your Name] > Subscriptions.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.1
+  },
+  {
+    "id": "EVAL_GEN_109",
+    "tweet_text": "@AppleSupport My Mac speaker makes a crackling sound when playing YouTube videos.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Audio output troubleshooting.",
+    "reference_resolution": "Restart CoreAudio daemon in Terminal using `sudo killall coreaudiod` or restart your Mac.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.8
+  },
+  {
+    "id": "EVAL_GEN_110",
+    "tweet_text": "Ugh @AppleSupport iPhone microphone sounds quiet during phone calls, people can't hear me.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Microphone cleaning & case check.",
+    "reference_resolution": "Ensure your case isn't blocking the bottom microphone grille and clean gently with a dry soft brush.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.4
+  },
+  {
+    "id": "EVAL_GEN_111",
+    "tweet_text": "Hey @AppleSupport Face ID stopped working after phone fell on carpet. Says 'Face ID Not Available'.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "TrueDepth hardware sensor damage.",
+    "reference_resolution": "Hardware TrueDepth camera failure requires an Apple Store diagnostic appointment: apple.co/RepairStore",
+    "difficulty": "simple",
+    "human_quality_score": 4.0
+  },
+  {
+    "id": "EVAL_GEN_112",
+    "tweet_text": "@AppleSupport quick question: AirDrop stuck on 'Waiting...' when transferring 4K video file.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "AirDrop large transfer guidance.",
+    "reference_resolution": "Keep screens awake on both devices during large file transfers and remain within Bluetooth range.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.7
+  },
+  {
+    "id": "EVAL_GEN_113",
+    "tweet_text": "@AppleSupport help! My iPhone battery health went down to 82% after 6 months. Can I get a replacement?",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Standard battery health inquiry.",
+    "reference_resolution": "If your battery drops below 80% within the 1-year warranty, Apple covers free replacement.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.3
+  },
+  {
+    "id": "EVAL_GEN_114",
+    "tweet_text": "@AppleSupport Phone feels like a heater when playing games and charging at the same time. Is this safe?",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Thermal query while charging.",
+    "reference_resolution": "Gaming while fast-charging creates normal thermal buildup. Disconnect charger to cool down.",
+    "difficulty": "adversarial",
+    "human_quality_score": 5.0
+  },
+  {
+    "id": "EVAL_GEN_115",
+    "tweet_text": "Ugh @AppleSupport Battery indicator jumps from 40% to 1% and shuts down instantly! HELP!",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Hardware power calibration anomaly.",
+    "reference_resolution": "Unexpected shutdowns warrant a hardware battery diagnostic at an Apple Store.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.6
+  },
+  {
+    "id": "EVAL_GEN_116",
+    "tweet_text": "Hey @AppleSupport Wireless charging pad stopped working with my MagSafe case yesterday.",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "MagSafe accessory check.",
+    "reference_resolution": "Ensure your case is MagSafe certified and remove any metal rings or credit cards between phone and charger.",
+    "difficulty": "simple",
+    "human_quality_score": 4.2
+  },
+  {
+    "id": "EVAL_GEN_117",
+    "tweet_text": "@AppleSupport quick question: App icons missing after iOS update! How do I restore them?",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "UI indexing post-update.",
+    "reference_resolution": "Swipe left to the App Library to relocate missing apps or reset Home Screen Layout in Settings.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.9
+  },
+  {
+    "id": "EVAL_GEN_118",
+    "tweet_text": "@AppleSupport help! Screen freeze on incoming calls, can't tap accept or decline!",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Critical telephony bug interrupting incoming calls.",
+    "reference_resolution": "We apologize for the call freeze. Please force restart your iPhone and DM us if issue persists.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.5
+  },
+  {
+    "id": "EVAL_GEN_119",
+    "tweet_text": "@AppleSupport Safari crashes whenever I open more than 3 tabs on my iPad.",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Safari browser crash fix.",
+    "reference_resolution": "Clear Safari cache in Settings > Safari > Clear History and Website Data, then restart.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.1
+  },
+  {
+    "id": "EVAL_GEN_120",
+    "tweet_text": "Ugh @AppleSupport Storage filled up with 40GB of 'System Data' after updating!",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "System data storage bug.",
+    "reference_resolution": "Connect device to Mac/PC via cable to let system caches re-index and free System Data space.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.8
+  },
+  {
+    "id": "EVAL_GEN_121",
+    "tweet_text": "Hey @AppleSupport Can I change my Apple ID email address without losing my purchased apps?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Account email change guidance.",
+    "reference_resolution": "Yes! Update your primary email at appleid.apple.com. All purchases remain linked to your account.",
+    "difficulty": "simple",
+    "human_quality_score": 4.4
+  },
+  {
+    "id": "EVAL_GEN_122",
+    "tweet_text": "@AppleSupport quick question: Locked out of my Apple ID because my old phone number is disconnected! Help!",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Account recovery lockout with lost 2FA phone number.",
+    "reference_resolution": "Initiate Account Recovery at iforgot.apple.com to verify identity and update trusted phone number.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.0
+  },
+  {
+    "id": "EVAL_GEN_123",
+    "tweet_text": "@AppleSupport help! Received an email saying my Apple ID was accessed from Russia! Is this fake?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Phishing protection advice.",
+    "reference_resolution": "Do not click links in suspicious emails. Verify active logins directly at appleid.apple.com.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.7
+  },
+  {
+    "id": "EVAL_GEN_124",
+    "tweet_text": "@AppleSupport How do I turn on 2FA for an older Apple ID account?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "2FA setup guidance.",
+    "reference_resolution": "Go to Settings > [Your Name] > Password & Security > Turn On Two-Factor Authentication.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.3
+  },
+  {
+    "id": "EVAL_GEN_125",
+    "tweet_text": "Ugh @AppleSupport iCloud Backup keeps failing every night saying 'Not Enough Storage'.",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "iCloud backup storage quota.",
+    "reference_resolution": "Manage what gets backed up under Settings > [Your Name] > iCloud > iCloud Backup > [This iPhone].",
+    "difficulty": "frustrated",
+    "human_quality_score": 5.0
+  },
+  {
+    "id": "EVAL_GEN_126",
+    "tweet_text": "Hey @AppleSupport Photos synced to iCloud are blurry on my iPhone when offline.",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Optimize iPhone Storage behavior.",
+    "reference_resolution": "Turn on 'Download and Keep Originals' in Settings > Photos to store full resolution photos locally.",
+    "difficulty": "simple",
+    "human_quality_score": 4.6
+  },
+  {
+    "id": "EVAL_GEN_127",
+    "tweet_text": "@AppleSupport quick question: Can I share 200GB iCloud storage with my spouse?",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Family Sharing iCloud quota.",
+    "reference_resolution": "Yes! Set up Family Sharing in Settings > [Your Name] > Family Sharing and invite your spouse.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.2
+  },
+  {
+    "id": "EVAL_GEN_128",
+    "tweet_text": "@AppleSupport help! In-app purchase didn't show up in my game but card was charged \\$19.99!",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Failed digital purchase entitlement needing receipt validation.",
+    "reference_resolution": "Tap 'Restore Purchases' inside the app menu. If missing, report the issue at reportaproblem.apple.com",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.9
+  },
+  {
+    "id": "EVAL_GEN_129",
+    "tweet_text": "@AppleSupport How do I cancel my Apple TV+ subscription trial before it charges me?",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Subscription cancellation self-service.",
+    "reference_resolution": "Go to Settings > [Your Name] > Subscriptions > Apple TV+ > Cancel Subscription.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.5
+  },
+  {
+    "id": "EVAL_GEN_130",
+    "tweet_text": "Ugh @AppleSupport Unrecognized \\$4.99 recurring charge on my bank statement every month from Apple.",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Subscription lookup.",
+    "reference_resolution": "Check active subscriptions at reportaproblem.apple.com or Settings > [Your Name] > Subscriptions.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.1
+  },
+  {
+    "id": "EVAL_GEN_131",
+    "tweet_text": "Hey @AppleSupport My Mac speaker makes a crackling sound when playing YouTube videos.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Audio output troubleshooting.",
+    "reference_resolution": "Restart CoreAudio daemon in Terminal using `sudo killall coreaudiod` or restart your Mac.",
+    "difficulty": "simple",
+    "human_quality_score": 4.8
+  },
+  {
+    "id": "EVAL_GEN_132",
+    "tweet_text": "@AppleSupport quick question: iPhone microphone sounds quiet during phone calls, people can't hear me.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Microphone cleaning & case check.",
+    "reference_resolution": "Ensure your case isn't blocking the bottom microphone grille and clean gently with a dry soft brush.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.4
+  },
+  {
+    "id": "EVAL_GEN_133",
+    "tweet_text": "@AppleSupport help! Face ID stopped working after phone fell on carpet. Says 'Face ID Not Available'.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "TrueDepth hardware sensor damage.",
+    "reference_resolution": "Hardware TrueDepth camera failure requires an Apple Store diagnostic appointment: apple.co/RepairStore",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.0
+  },
+  {
+    "id": "EVAL_GEN_134",
+    "tweet_text": "@AppleSupport AirDrop stuck on 'Waiting...' when transferring 4K video file.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "AirDrop large transfer guidance.",
+    "reference_resolution": "Keep screens awake on both devices during large file transfers and remain within Bluetooth range.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.7
+  },
+  {
+    "id": "EVAL_GEN_135",
+    "tweet_text": "Ugh @AppleSupport My iPhone battery health went down to 82% after 6 months. Can I get a replacement?",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Standard battery health inquiry.",
+    "reference_resolution": "If your battery drops below 80% within the 1-year warranty, Apple covers free replacement.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.3
+  },
+  {
+    "id": "EVAL_GEN_136",
+    "tweet_text": "Hey @AppleSupport Phone feels like a heater when playing games and charging at the same time. Is this safe?",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Thermal query while charging.",
+    "reference_resolution": "Gaming while fast-charging creates normal thermal buildup. Disconnect charger to cool down.",
+    "difficulty": "simple",
+    "human_quality_score": 5.0
+  },
+  {
+    "id": "EVAL_GEN_137",
+    "tweet_text": "@AppleSupport quick question: Battery indicator jumps from 40% to 1% and shuts down instantly! HELP!",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Hardware power calibration anomaly.",
+    "reference_resolution": "Unexpected shutdowns warrant a hardware battery diagnostic at an Apple Store.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.6
+  },
+  {
+    "id": "EVAL_GEN_138",
+    "tweet_text": "@AppleSupport help! Wireless charging pad stopped working with my MagSafe case yesterday.",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "MagSafe accessory check.",
+    "reference_resolution": "Ensure your case is MagSafe certified and remove any metal rings or credit cards between phone and charger.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.2
+  },
+  {
+    "id": "EVAL_GEN_139",
+    "tweet_text": "@AppleSupport App icons missing after iOS update! How do I restore them?",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "UI indexing post-update.",
+    "reference_resolution": "Swipe left to the App Library to relocate missing apps or reset Home Screen Layout in Settings.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.9
+  },
+  {
+    "id": "EVAL_GEN_140",
+    "tweet_text": "Ugh @AppleSupport Screen freeze on incoming calls, can't tap accept or decline!",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Critical telephony bug interrupting incoming calls.",
+    "reference_resolution": "We apologize for the call freeze. Please force restart your iPhone and DM us if issue persists.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.5
+  },
+  {
+    "id": "EVAL_GEN_141",
+    "tweet_text": "Hey @AppleSupport Safari crashes whenever I open more than 3 tabs on my iPad.",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Safari browser crash fix.",
+    "reference_resolution": "Clear Safari cache in Settings > Safari > Clear History and Website Data, then restart.",
+    "difficulty": "simple",
+    "human_quality_score": 4.1
+  },
+  {
+    "id": "EVAL_GEN_142",
+    "tweet_text": "@AppleSupport quick question: Storage filled up with 40GB of 'System Data' after updating!",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "System data storage bug.",
+    "reference_resolution": "Connect device to Mac/PC via cable to let system caches re-index and free System Data space.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.8
+  },
+  {
+    "id": "EVAL_GEN_143",
+    "tweet_text": "@AppleSupport help! Can I change my Apple ID email address without losing my purchased apps?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Account email change guidance.",
+    "reference_resolution": "Yes! Update your primary email at appleid.apple.com. All purchases remain linked to your account.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.4
+  },
+  {
+    "id": "EVAL_GEN_144",
+    "tweet_text": "@AppleSupport Locked out of my Apple ID because my old phone number is disconnected! Help!",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Account recovery lockout with lost 2FA phone number.",
+    "reference_resolution": "Initiate Account Recovery at iforgot.apple.com to verify identity and update trusted phone number.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.0
+  },
+  {
+    "id": "EVAL_GEN_145",
+    "tweet_text": "Ugh @AppleSupport Received an email saying my Apple ID was accessed from Russia! Is this fake?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Phishing protection advice.",
+    "reference_resolution": "Do not click links in suspicious emails. Verify active logins directly at appleid.apple.com.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.7
+  },
+  {
+    "id": "EVAL_GEN_146",
+    "tweet_text": "Hey @AppleSupport How do I turn on 2FA for an older Apple ID account?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "2FA setup guidance.",
+    "reference_resolution": "Go to Settings > [Your Name] > Password & Security > Turn On Two-Factor Authentication.",
+    "difficulty": "simple",
+    "human_quality_score": 4.3
+  },
+  {
+    "id": "EVAL_GEN_147",
+    "tweet_text": "@AppleSupport quick question: iCloud Backup keeps failing every night saying 'Not Enough Storage'.",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "iCloud backup storage quota.",
+    "reference_resolution": "Manage what gets backed up under Settings > [Your Name] > iCloud > iCloud Backup > [This iPhone].",
+    "difficulty": "ambiguous",
+    "human_quality_score": 5.0
+  },
+  {
+    "id": "EVAL_GEN_148",
+    "tweet_text": "@AppleSupport help! Photos synced to iCloud are blurry on my iPhone when offline.",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Optimize iPhone Storage behavior.",
+    "reference_resolution": "Turn on 'Download and Keep Originals' in Settings > Photos to store full resolution photos locally.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.6
+  },
+  {
+    "id": "EVAL_GEN_149",
+    "tweet_text": "@AppleSupport Can I share 200GB iCloud storage with my spouse?",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Family Sharing iCloud quota.",
+    "reference_resolution": "Yes! Set up Family Sharing in Settings > [Your Name] > Family Sharing and invite your spouse.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.2
+  },
+  {
+    "id": "EVAL_GEN_150",
+    "tweet_text": "Ugh @AppleSupport In-app purchase didn't show up in my game but card was charged \\$19.99!",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Failed digital purchase entitlement needing receipt validation.",
+    "reference_resolution": "Tap 'Restore Purchases' inside the app menu. If missing, report the issue at reportaproblem.apple.com",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.9
+  },
+  {
+    "id": "EVAL_GEN_151",
+    "tweet_text": "Hey @AppleSupport How do I cancel my Apple TV+ subscription trial before it charges me?",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Subscription cancellation self-service.",
+    "reference_resolution": "Go to Settings > [Your Name] > Subscriptions > Apple TV+ > Cancel Subscription.",
+    "difficulty": "simple",
+    "human_quality_score": 4.5
+  },
+  {
+    "id": "EVAL_GEN_152",
+    "tweet_text": "@AppleSupport quick question: Unrecognized \\$4.99 recurring charge on my bank statement every month from Apple.",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Subscription lookup.",
+    "reference_resolution": "Check active subscriptions at reportaproblem.apple.com or Settings > [Your Name] > Subscriptions.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.1
+  },
+  {
+    "id": "EVAL_GEN_153",
+    "tweet_text": "@AppleSupport help! My Mac speaker makes a crackling sound when playing YouTube videos.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Audio output troubleshooting.",
+    "reference_resolution": "Restart CoreAudio daemon in Terminal using `sudo killall coreaudiod` or restart your Mac.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.8
+  },
+  {
+    "id": "EVAL_GEN_154",
+    "tweet_text": "@AppleSupport iPhone microphone sounds quiet during phone calls, people can't hear me.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Microphone cleaning & case check.",
+    "reference_resolution": "Ensure your case isn't blocking the bottom microphone grille and clean gently with a dry soft brush.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.4
+  },
+  {
+    "id": "EVAL_GEN_155",
+    "tweet_text": "Ugh @AppleSupport Face ID stopped working after phone fell on carpet. Says 'Face ID Not Available'.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "TrueDepth hardware sensor damage.",
+    "reference_resolution": "Hardware TrueDepth camera failure requires an Apple Store diagnostic appointment: apple.co/RepairStore",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.0
+  },
+  {
+    "id": "EVAL_GEN_156",
+    "tweet_text": "Hey @AppleSupport AirDrop stuck on 'Waiting...' when transferring 4K video file.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "AirDrop large transfer guidance.",
+    "reference_resolution": "Keep screens awake on both devices during large file transfers and remain within Bluetooth range.",
+    "difficulty": "simple",
+    "human_quality_score": 4.7
+  },
+  {
+    "id": "EVAL_GEN_157",
+    "tweet_text": "@AppleSupport quick question: My iPhone battery health went down to 82% after 6 months. Can I get a replacement?",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Standard battery health inquiry.",
+    "reference_resolution": "If your battery drops below 80% within the 1-year warranty, Apple covers free replacement.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.3
+  },
+  {
+    "id": "EVAL_GEN_158",
+    "tweet_text": "@AppleSupport help! Phone feels like a heater when playing games and charging at the same time. Is this safe?",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Thermal query while charging.",
+    "reference_resolution": "Gaming while fast-charging creates normal thermal buildup. Disconnect charger to cool down.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 5.0
+  },
+  {
+    "id": "EVAL_GEN_159",
+    "tweet_text": "@AppleSupport Battery indicator jumps from 40% to 1% and shuts down instantly! HELP!",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Hardware power calibration anomaly.",
+    "reference_resolution": "Unexpected shutdowns warrant a hardware battery diagnostic at an Apple Store.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.6
+  },
+  {
+    "id": "EVAL_GEN_160",
+    "tweet_text": "Ugh @AppleSupport Wireless charging pad stopped working with my MagSafe case yesterday.",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "MagSafe accessory check.",
+    "reference_resolution": "Ensure your case is MagSafe certified and remove any metal rings or credit cards between phone and charger.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.2
+  },
+  {
+    "id": "EVAL_GEN_161",
+    "tweet_text": "Hey @AppleSupport App icons missing after iOS update! How do I restore them?",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "UI indexing post-update.",
+    "reference_resolution": "Swipe left to the App Library to relocate missing apps or reset Home Screen Layout in Settings.",
+    "difficulty": "simple",
+    "human_quality_score": 4.9
+  },
+  {
+    "id": "EVAL_GEN_162",
+    "tweet_text": "@AppleSupport quick question: Screen freeze on incoming calls, can't tap accept or decline!",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Critical telephony bug interrupting incoming calls.",
+    "reference_resolution": "We apologize for the call freeze. Please force restart your iPhone and DM us if issue persists.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.5
+  },
+  {
+    "id": "EVAL_GEN_163",
+    "tweet_text": "@AppleSupport help! Safari crashes whenever I open more than 3 tabs on my iPad.",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Safari browser crash fix.",
+    "reference_resolution": "Clear Safari cache in Settings > Safari > Clear History and Website Data, then restart.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.1
+  },
+  {
+    "id": "EVAL_GEN_164",
+    "tweet_text": "@AppleSupport Storage filled up with 40GB of 'System Data' after updating!",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "System data storage bug.",
+    "reference_resolution": "Connect device to Mac/PC via cable to let system caches re-index and free System Data space.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.8
+  },
+  {
+    "id": "EVAL_GEN_165",
+    "tweet_text": "Ugh @AppleSupport Can I change my Apple ID email address without losing my purchased apps?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Account email change guidance.",
+    "reference_resolution": "Yes! Update your primary email at appleid.apple.com. All purchases remain linked to your account.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.4
+  },
+  {
+    "id": "EVAL_GEN_166",
+    "tweet_text": "Hey @AppleSupport Locked out of my Apple ID because my old phone number is disconnected! Help!",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Account recovery lockout with lost 2FA phone number.",
+    "reference_resolution": "Initiate Account Recovery at iforgot.apple.com to verify identity and update trusted phone number.",
+    "difficulty": "simple",
+    "human_quality_score": 4.0
+  },
+  {
+    "id": "EVAL_GEN_167",
+    "tweet_text": "@AppleSupport quick question: Received an email saying my Apple ID was accessed from Russia! Is this fake?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Phishing protection advice.",
+    "reference_resolution": "Do not click links in suspicious emails. Verify active logins directly at appleid.apple.com.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.7
+  },
+  {
+    "id": "EVAL_GEN_168",
+    "tweet_text": "@AppleSupport help! How do I turn on 2FA for an older Apple ID account?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "2FA setup guidance.",
+    "reference_resolution": "Go to Settings > [Your Name] > Password & Security > Turn On Two-Factor Authentication.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.3
+  },
+  {
+    "id": "EVAL_GEN_169",
+    "tweet_text": "@AppleSupport iCloud Backup keeps failing every night saying 'Not Enough Storage'.",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "iCloud backup storage quota.",
+    "reference_resolution": "Manage what gets backed up under Settings > [Your Name] > iCloud > iCloud Backup > [This iPhone].",
+    "difficulty": "adversarial",
+    "human_quality_score": 5.0
+  },
+  {
+    "id": "EVAL_GEN_170",
+    "tweet_text": "Ugh @AppleSupport Photos synced to iCloud are blurry on my iPhone when offline.",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Optimize iPhone Storage behavior.",
+    "reference_resolution": "Turn on 'Download and Keep Originals' in Settings > Photos to store full resolution photos locally.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.6
+  },
+  {
+    "id": "EVAL_GEN_171",
+    "tweet_text": "Hey @AppleSupport Can I share 200GB iCloud storage with my spouse?",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Family Sharing iCloud quota.",
+    "reference_resolution": "Yes! Set up Family Sharing in Settings > [Your Name] > Family Sharing and invite your spouse.",
+    "difficulty": "simple",
+    "human_quality_score": 4.2
+  },
+  {
+    "id": "EVAL_GEN_172",
+    "tweet_text": "@AppleSupport quick question: In-app purchase didn't show up in my game but card was charged \\$19.99!",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Failed digital purchase entitlement needing receipt validation.",
+    "reference_resolution": "Tap 'Restore Purchases' inside the app menu. If missing, report the issue at reportaproblem.apple.com",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.9
+  },
+  {
+    "id": "EVAL_GEN_173",
+    "tweet_text": "@AppleSupport help! How do I cancel my Apple TV+ subscription trial before it charges me?",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Subscription cancellation self-service.",
+    "reference_resolution": "Go to Settings > [Your Name] > Subscriptions > Apple TV+ > Cancel Subscription.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.5
+  },
+  {
+    "id": "EVAL_GEN_174",
+    "tweet_text": "@AppleSupport Unrecognized \\$4.99 recurring charge on my bank statement every month from Apple.",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Subscription lookup.",
+    "reference_resolution": "Check active subscriptions at reportaproblem.apple.com or Settings > [Your Name] > Subscriptions.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.1
+  },
+  {
+    "id": "EVAL_GEN_175",
+    "tweet_text": "Ugh @AppleSupport My Mac speaker makes a crackling sound when playing YouTube videos.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Audio output troubleshooting.",
+    "reference_resolution": "Restart CoreAudio daemon in Terminal using `sudo killall coreaudiod` or restart your Mac.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.8
+  },
+  {
+    "id": "EVAL_GEN_176",
+    "tweet_text": "Hey @AppleSupport iPhone microphone sounds quiet during phone calls, people can't hear me.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Microphone cleaning & case check.",
+    "reference_resolution": "Ensure your case isn't blocking the bottom microphone grille and clean gently with a dry soft brush.",
+    "difficulty": "simple",
+    "human_quality_score": 4.4
+  },
+  {
+    "id": "EVAL_GEN_177",
+    "tweet_text": "@AppleSupport quick question: Face ID stopped working after phone fell on carpet. Says 'Face ID Not Available'.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "TrueDepth hardware sensor damage.",
+    "reference_resolution": "Hardware TrueDepth camera failure requires an Apple Store diagnostic appointment: apple.co/RepairStore",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.0
+  },
+  {
+    "id": "EVAL_GEN_178",
+    "tweet_text": "@AppleSupport help! AirDrop stuck on 'Waiting...' when transferring 4K video file.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "AirDrop large transfer guidance.",
+    "reference_resolution": "Keep screens awake on both devices during large file transfers and remain within Bluetooth range.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.7
+  },
+  {
+    "id": "EVAL_GEN_179",
+    "tweet_text": "@AppleSupport My iPhone battery health went down to 82% after 6 months. Can I get a replacement?",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Standard battery health inquiry.",
+    "reference_resolution": "If your battery drops below 80% within the 1-year warranty, Apple covers free replacement.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.3
+  },
+  {
+    "id": "EVAL_GEN_180",
+    "tweet_text": "Ugh @AppleSupport Phone feels like a heater when playing games and charging at the same time. Is this safe?",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Thermal query while charging.",
+    "reference_resolution": "Gaming while fast-charging creates normal thermal buildup. Disconnect charger to cool down.",
+    "difficulty": "frustrated",
+    "human_quality_score": 5.0
+  },
+  {
+    "id": "EVAL_GEN_181",
+    "tweet_text": "Hey @AppleSupport Battery indicator jumps from 40% to 1% and shuts down instantly! HELP!",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Hardware power calibration anomaly.",
+    "reference_resolution": "Unexpected shutdowns warrant a hardware battery diagnostic at an Apple Store.",
+    "difficulty": "simple",
+    "human_quality_score": 4.6
+  },
+  {
+    "id": "EVAL_GEN_182",
+    "tweet_text": "@AppleSupport quick question: Wireless charging pad stopped working with my MagSafe case yesterday.",
+    "ground_truth_intent": "BATTERY_HARDWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "MagSafe accessory check.",
+    "reference_resolution": "Ensure your case is MagSafe certified and remove any metal rings or credit cards between phone and charger.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.2
+  },
+  {
+    "id": "EVAL_GEN_183",
+    "tweet_text": "@AppleSupport help! App icons missing after iOS update! How do I restore them?",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "UI indexing post-update.",
+    "reference_resolution": "Swipe left to the App Library to relocate missing apps or reset Home Screen Layout in Settings.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.9
+  },
+  {
+    "id": "EVAL_GEN_184",
+    "tweet_text": "@AppleSupport Screen freeze on incoming calls, can't tap accept or decline!",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Critical telephony bug interrupting incoming calls.",
+    "reference_resolution": "We apologize for the call freeze. Please force restart your iPhone and DM us if issue persists.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.5
+  },
+  {
+    "id": "EVAL_GEN_185",
+    "tweet_text": "Ugh @AppleSupport Safari crashes whenever I open more than 3 tabs on my iPad.",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Safari browser crash fix.",
+    "reference_resolution": "Clear Safari cache in Settings > Safari > Clear History and Website Data, then restart.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.1
+  },
+  {
+    "id": "EVAL_GEN_186",
+    "tweet_text": "Hey @AppleSupport Storage filled up with 40GB of 'System Data' after updating!",
+    "ground_truth_intent": "IOS_UPDATE_SOFTWARE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "System data storage bug.",
+    "reference_resolution": "Connect device to Mac/PC via cable to let system caches re-index and free System Data space.",
+    "difficulty": "simple",
+    "human_quality_score": 4.8
+  },
+  {
+    "id": "EVAL_GEN_187",
+    "tweet_text": "@AppleSupport quick question: Can I change my Apple ID email address without losing my purchased apps?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Account email change guidance.",
+    "reference_resolution": "Yes! Update your primary email at appleid.apple.com. All purchases remain linked to your account.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.4
+  },
+  {
+    "id": "EVAL_GEN_188",
+    "tweet_text": "@AppleSupport help! Locked out of my Apple ID because my old phone number is disconnected! Help!",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Account recovery lockout with lost 2FA phone number.",
+    "reference_resolution": "Initiate Account Recovery at iforgot.apple.com to verify identity and update trusted phone number.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.0
+  },
+  {
+    "id": "EVAL_GEN_189",
+    "tweet_text": "@AppleSupport Received an email saying my Apple ID was accessed from Russia! Is this fake?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Phishing protection advice.",
+    "reference_resolution": "Do not click links in suspicious emails. Verify active logins directly at appleid.apple.com.",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.7
+  },
+  {
+    "id": "EVAL_GEN_190",
+    "tweet_text": "Ugh @AppleSupport How do I turn on 2FA for an older Apple ID account?",
+    "ground_truth_intent": "APPLE_ID_ACCOUNT",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "2FA setup guidance.",
+    "reference_resolution": "Go to Settings > [Your Name] > Password & Security > Turn On Two-Factor Authentication.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.3
+  },
+  {
+    "id": "EVAL_GEN_191",
+    "tweet_text": "Hey @AppleSupport iCloud Backup keeps failing every night saying 'Not Enough Storage'.",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "iCloud backup storage quota.",
+    "reference_resolution": "Manage what gets backed up under Settings > [Your Name] > iCloud > iCloud Backup > [This iPhone].",
+    "difficulty": "simple",
+    "human_quality_score": 5.0
+  },
+  {
+    "id": "EVAL_GEN_192",
+    "tweet_text": "@AppleSupport quick question: Photos synced to iCloud are blurry on my iPhone when offline.",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Optimize iPhone Storage behavior.",
+    "reference_resolution": "Turn on 'Download and Keep Originals' in Settings > Photos to store full resolution photos locally.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.6
+  },
+  {
+    "id": "EVAL_GEN_193",
+    "tweet_text": "@AppleSupport help! Can I share 200GB iCloud storage with my spouse?",
+    "ground_truth_intent": "ICLOUD_SYNC_STORAGE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Family Sharing iCloud quota.",
+    "reference_resolution": "Yes! Set up Family Sharing in Settings > [Your Name] > Family Sharing and invite your spouse.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.2
+  },
+  {
+    "id": "EVAL_GEN_194",
+    "tweet_text": "@AppleSupport In-app purchase didn't show up in my game but card was charged \\$19.99!",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "Failed digital purchase entitlement needing receipt validation.",
+    "reference_resolution": "Tap 'Restore Purchases' inside the app menu. If missing, report the issue at reportaproblem.apple.com",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.9
+  },
+  {
+    "id": "EVAL_GEN_195",
+    "tweet_text": "Ugh @AppleSupport How do I cancel my Apple TV+ subscription trial before it charges me?",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Subscription cancellation self-service.",
+    "reference_resolution": "Go to Settings > [Your Name] > Subscriptions > Apple TV+ > Cancel Subscription.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.5
+  },
+  {
+    "id": "EVAL_GEN_196",
+    "tweet_text": "Hey @AppleSupport Unrecognized \\$4.99 recurring charge on my bank statement every month from Apple.",
+    "ground_truth_intent": "APP_STORE_PURCHASE",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Subscription lookup.",
+    "reference_resolution": "Check active subscriptions at reportaproblem.apple.com or Settings > [Your Name] > Subscriptions.",
+    "difficulty": "simple",
+    "human_quality_score": 4.1
+  },
+  {
+    "id": "EVAL_GEN_197",
+    "tweet_text": "@AppleSupport quick question: My Mac speaker makes a crackling sound when playing YouTube videos.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Audio output troubleshooting.",
+    "reference_resolution": "Restart CoreAudio daemon in Terminal using `sudo killall coreaudiod` or restart your Mac.",
+    "difficulty": "ambiguous",
+    "human_quality_score": 4.8
+  },
+  {
+    "id": "EVAL_GEN_198",
+    "tweet_text": "@AppleSupport help! iPhone microphone sounds quiet during phone calls, people can't hear me.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "Microphone cleaning & case check.",
+    "reference_resolution": "Ensure your case isn't blocking the bottom microphone grille and clean gently with a dry soft brush.",
+    "difficulty": "multi_intent",
+    "human_quality_score": 4.4
+  },
+  {
+    "id": "EVAL_GEN_199",
+    "tweet_text": "@AppleSupport Face ID stopped working after phone fell on carpet. Says 'Face ID Not Available'.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "ESCALATE",
+    "ground_truth_escalation_reason": "TrueDepth hardware sensor damage.",
+    "reference_resolution": "Hardware TrueDepth camera failure requires an Apple Store diagnostic appointment: apple.co/RepairStore",
+    "difficulty": "adversarial",
+    "human_quality_score": 4.0
+  },
+  {
+    "id": "EVAL_GEN_200",
+    "tweet_text": "Ugh @AppleSupport AirDrop stuck on 'Waiting...' when transferring 4K video file.",
+    "ground_truth_intent": "GENERAL_DEVICE_TROUBLESHOOTING",
+    "ground_truth_action": "AUTO_REPLY",
+    "ground_truth_escalation_reason": "AirDrop large transfer guidance.",
+    "reference_resolution": "Keep screens awake on both devices during large file transfers and remain within Bluetooth range.",
+    "difficulty": "frustrated",
+    "human_quality_score": 4.7
+  }
+]

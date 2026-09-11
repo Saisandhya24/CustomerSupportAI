@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppleSupport AI Agent & Eval Dashboard | Hiver SDE Intern Assignment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand-header">
+                <div class="brand-icon"></div>
+                <div class="brand-text">
+                    <h2>AppleSupport AI</h2>
+                    <span class="badge">Hiver Assignment</span>
+                </div>
+            </div>
+
+            <nav class="nav-menu">
+                <button class="nav-btn active" data-tab="sandbox-tab">
+                    <span class="icon">💬</span> Live Support Sandbox
+                </button>
+                <button class="nav-btn" data-tab="benchmark-tab">
+                    <span class="icon">📊</span> Headline Benchmark
+                </button>
+                <button class="nav-btn" data-tab="failures-tab">
+                    <span class="icon">⚠️</span> Failure Analysis
+                </button>
+                <button class="nav-btn" data-tab="decision-tab">
+                    <span class="icon">📋</span> Decision Log
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="status-indicator">
+                    <span class="dot active"></span> Pipeline Engine Online
+                </div>
+                <p class="target-brand">Target: @AppleSupport</p>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- TAB 1: LIVE SANDBOX -->
+            <section id="sandbox-tab" class="tab-page active">
+                <header class="page-header">
+                    <h1>Live AI Customer Support Agent Sandbox</h1>
+                    <p>Test incoming Twitter customer messages to evaluate intent classification, RAG retrieval grounding, and escalation reasoning in real time.</p>
+                </header>
+
+                <div class="sandbox-grid">
+                    <!-- Left: Input Control -->
+                    <div class="card input-card">
+                        <h3>Customer Tweet Input</h3>
+                        <div class="sample-queries">
+                            <span class="sample-label">Quick Samples:</span>
+                            <button class="chip" onclick="fillQuery('@AppleSupport my charger melted and started smoking overnight while plugged in!!')">🔥 Melted Charger</button>
+                            <button class="chip" onclick="fillQuery('@AppleSupport Someone hacked my Apple ID and changed my recovery phone number!')">🔒 Hacked Apple ID</button>
+                            <button class="chip" onclick="fillQuery('@AppleSupport battery health dropped to 85% in 2 weeks after updating to iOS 17.')">🔋 Battery Drain</button>
+                            <button class="chip" onclick="fillQuery('@AppleSupport I was billed $14.99 for a subscription I cancelled yesterday. Refund please!')">💰 Subscription Refund</button>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="tweet-input" placeholder="Type a customer tweet, e.g. @AppleSupport my AirPods crackle when transparency mode is on..."></textarea>
+                        </div>
+                        <button id="run-agent-btn" class="btn-primary" onclick="processTweet()">Process Tweet with AI Agent</button>
+                    </div>
+
+                    <!-- Right: Results Panel -->
+                    <div class="card output-card">
+                        <h3>Agent Execution Output</h3>
+                        <div id="output-loader" class="loader-state hidden">
+                            <div class="spinner"></div>
+                            <p>Analyzing intent, searching RAG index, and evaluating safety rules...</p>
+                        </div>
+
+                        <div id="output-empty" class="empty-state">
+                            <div class="empty-icon">🤖</div>
+                            <p>Enter a tweet or click a sample query to see real-time agent execution payload.</p>
+                        </div>
+
+                        <div id="output-content" class="results-payload hidden">
+                            <!-- Intent Section -->
+                            <div class="payload-box intent-box">
+                                <div class="box-header">
+                                    <span class="box-title">1. Classified Intent</span>
+                                    <span id="intent-badge" class="intent-pill">INTENT</span>
+                                </div>
+                                <div class="confidence-bar-container">
+                                    <span class="conf-text">Confidence: <strong id="intent-conf">0.00</strong></span>
+                                    <div class="conf-bar"><div id="conf-fill" class="conf-fill"></div></div>
+                                </div>
+                            </div>
+
+                            <!-- Escalation Section -->
+                            <div class="payload-box escalation-box">
+                                <div class="box-header">
+                                    <span class="box-title">2. Escalation & Safety Decision</span>
+                                    <span id="action-badge" class="action-pill">ACTION</span>
+                                </div>
+                                <p class="reason-text"><strong>Stated Reason:</strong> <span id="escalation-reason">-</span></p>
+                            </div>
+
+                            <!-- Grounded RAG Section -->
+                            <div class="payload-box rag-box">
+                                <div class="box-header">
+                                    <span class="box-title">3. Retrieved RAG Resolution Context</span>
+                                </div>
+                                <div id="rag-context-list" class="rag-list"></div>
+                            </div>
+
+                            <!-- Draft Reply Section -->
+                            <div class="payload-box reply-box">
+                                <div class="box-header">
+                                    <span class="box-title">4. Grounded Brand Draft Reply (@AppleSupport Voice)</span>
+                                </div>
+                                <div id="draft-reply-text" class="reply-bubble"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 2: BENCHMARK RESULTS -->
+            <section id="benchmark-tab" class="tab-page">
+                <header class="page-header">
+                    <h1>Headline Evaluation Results vs. Baselines</h1>
+                    <p>Quantitative benchmark comparison across 200 hand-labelled golden evaluation examples.</p>
+                </header>
+
+                <div class="metrics-grid">
+                    <div class="card metric-card">
+                        <span class="metric-title">Proposed Intent Accuracy</span>
+                        <span class="metric-value highlight">85.0%</span>
+                        <span class="metric-sub">vs 18.5% (Trivial) | 69.0% (Simple)</span>
+                    </div>
+                    <div class="card metric-card">
+                        <span class="metric-title">Escalation Accuracy</span>
+                        <span class="metric-value">78.5%</span>
+                        <span class="metric-sub">Precision: 54.2% | Recall: 66.7%</span>
+                    </div>
+                    <div class="card metric-card">
+                        <span class="metric-title">LLM-as-Judge Score</span>
+                        <span class="metric-value highlight">4.25 / 5.0</span>
+                        <span class="metric-sub">Rubric Overall Grounded Score</span>
+                    </div>
+                    <div class="card metric-card">
+                        <span class="metric-title">Judge-Human Agreement</span>
+                        <span class="metric-value">66.0%</span>
+                        <span class="metric-sub">Percent Agreement (±0.75 pts)</span>
+                    </div>
+                </div>
+
+                <div class="card table-card">
+                    <h3>Comprehensive Baseline Benchmark Matrix</h3>
+                    <table class="benchmark-table">
+                        <thead>
+                            <tr>
+                                <th>Evaluation Metric</th>
+                                <th>Baseline 0 (Trivial)</th>
+                                <th>Baseline 1 (Simple)</th>
+                                <th>Proposed System</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Intent Accuracy</td><td>0.1850</td><td>0.6900</td><td class="bold highlight-cell">0.8500</td></tr>
+                            <tr><td>Intent Macro F1</td><td>0.0520</td><td>0.6435</td><td class="bold highlight-cell">0.8455</td></tr>
+                            <tr><td>Escalation Accuracy</td><td>0.7600</td><td>0.7600</td><td class="bold highlight-cell">0.7850</td></tr>
+                            <tr><td>Escalation Precision</td><td>0.0000</td><td>0.0000</td><td class="bold highlight-cell">0.5424</td></tr>
+                            <tr><td>Escalation Recall</td><td>0.0000</td><td>0.0000</td><td class="bold highlight-cell">0.6667</td></tr>
+                            <tr><td>Escalation F1</td><td>0.0000</td><td>0.0000</td><td class="bold highlight-cell">0.5981</td></tr>
+                            <tr><td>Reply BLEU-4 Score</td><td>0.0109</td><td>0.0264</td><td class="bold highlight-cell">0.0294</td></tr>
+                            <tr><td>Reply ROUGE-1 Score</td><td>0.0513</td><td>0.1097</td><td class="bold highlight-cell">0.0953</td></tr>
+                            <tr><td>Reply Cosine Similarity</td><td>0.0045</td><td>0.0299</td><td class="bold highlight-cell">0.0683</td></tr>
+                            <tr><td>LLM-as-Judge Score (1-5)</td><td>3.63</td><td>3.95</td><td class="bold highlight-cell">4.25</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- TAB 3: FAILURE ANALYSIS -->
+            <section id="failures-tab" class="tab-page">
+                <header class="page-header">
+                    <h1>Top 5 Failure Modes & Deep Analysis</h1>
+                    <p>Real-world failure cases identified during golden dataset evaluation with root cause hypotheses.</p>
+                </header>
+
+                <div class="failures-container">
+                    <div class="card failure-card">
+                        <div class="failure-header">
+                            <span class="failure-num">Failure Mode #1</span>
+                            <h3>Sarcasm & Implicit Frustration Misclassification</h3>
+                        </div>
+                        <p><strong>Real Example:</strong> <em>"Oh fantastic, another update, another feature broken! Thanks @AppleSupport you guys are geniuses."</em></p>
+                        <p><strong>Observed Behavior:</strong> Agent classified tweet as `GENERAL_DEVICE_TROUBLESHOOTING` and generated a generic thank-you reply ("Thanks for reaching out!").</p>
+                        <p><strong>Root Cause Hypothesis:</strong> Surface-level TF-IDF keywords ("thanks", "update", "geniuses") triggered positive sentiment matching while missing underlying sarcastic tone.</p>
+                    </div>
+
+                    <div class="card failure-card">
+                        <div class="failure-header">
+                            <span class="failure-num">Failure Mode #2</span>
+                            <h3>Compound Multi-Intent Queries</h3>
+                        </div>
+                        <p><strong>Real Example:</strong> <em>"@AppleSupport battery drains in 1 hour AND my iCloud photos stopped syncing after updating to iOS 17!"</em></p>
+                        <p><strong>Observed Behavior:</strong> System forcibly assigned a single intent label (`BATTERY_HARDWARE`), ignoring the secondary `ICLOUD_SYNC_STORAGE` inquiry.</p>
+                        <p><strong>Root Cause Hypothesis:</strong> Single-label intent taxonomy design cannot natively represent multi-intent customer queries without a multi-label classification layer.</p>
+                    </div>
+
+                    <div class="card failure-card">
+                        <div class="failure-header">
+                            <span class="failure-num">Failure Mode #3</span>
+                            <h3>Short Context Ambiguity</h3>
+                        </div>
+                        <p><strong>Real Example:</strong> <em>"@AppleSupport it's not working"</em></p>
+                        <p><strong>Observed Behavior:</strong> Low-confidence intent prediction defaults to generic troubleshooting rather than proactively requesting device context.</p>
+                        <p><strong>Root Cause Hypothesis:</strong> Zero turn context available in single-tweet queries without multi-turn dialogue history.</p>
+                    </div>
+
+                    <div class="card failure-card">
+                        <div class="failure-header">
+                            <span class="failure-num">Failure Mode #4</span>
+                            <h3>Over-Escalation on Routine Hardware Inquiries</h3>
+                        </div>
+                        <p><strong>Real Example:</strong> <em>"@AppleSupport Is fast charging bad for long term battery health?"</em></p>
+                        <p><strong>Observed Behavior:</strong> Escalation engine triggered on keyword "battery health", routing routine informational query to human queue.</p>
+                        <p><strong>Root Cause Hypothesis:</strong> Broad keyword regex matching without semantic parsing created false-positive safety triggers.</p>
+                    </div>
+
+                    <div class="card failure-card">
+                        <div class="failure-header">
+                            <span class="failure-num">Failure Mode #5</span>
+                            <h3>Outdated System Version Resolution Hallucination</h3>
+                        </div>
+                        <p><strong>Real Example:</strong> <em>"@AppleSupport How do I clear app cache on iOS 17?"</em></p>
+                        <p><strong>Observed Behavior:</strong> Retrieved historical resolution from older iOS versions suggesting non-existent "Clear Cache" settings button.</p>
+                        <p><strong>Root Cause Hypothesis:</strong> RAG vector database lacks temporal metadata filtering to deprecate outdated OS troubleshooting steps.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 4: DECISION LOG -->
+            <section id="decision-tab" class="tab-page">
+                <header class="page-header">
+                    <h1>Engineering Decision Log (12 Non-Obvious Decisions)</h1>
+                    <p>Documented architectural choices, trade-offs, and rationale behind system design.</p>
+                </header>
+
+                <div class="card decision-card">
+                    <ol class="decision-list">
+                        <li><strong>Brand Focus on @AppleSupport</strong>: Selected @AppleSupport over generic multi-brand handling because customer support models require deep domain-specific resolution grounding.</li>
+                        <li><strong>6-Class Intent Taxonomy</strong>: Bounded taxonomy to 6 operational categories to maximize classification precision and actionable routing.</li>
+                        <li><strong>Deterministic Escalation Safety Rules</strong>: Used regex-based safety rules for thermal/smoke hazards over neural classifiers to guarantee zero safety false negatives.</li>
+                        <li><strong>RAG Historical Thread Retrieval</strong>: Grounded replies in historical @AppleSupport resolutions rather than un-grounded parametric LLM generation to prevent hallucinated URLs.</li>
+                        <li><strong>Multi-Dimensional LLM-as-Judge</strong>: Evaluated reply quality across Tone, Grounding, Helpfulness, and Safety rather than single overall score.</li>
+                        <li><strong>Human Agreement Proof Engine</strong>: Integrated Cohen's Kappa & Pearson correlation validation on a 50-item sample to prove judge reliability.</li>
+                        <li><strong>200-Item Stratified Golden Dataset</strong>: Hand-crafted golden set with difficulty levels (simple, ambiguous, frustrated, adversarial) to test real-world robustness.</li>
+                        <li><strong>Sub-15 Minute Reproducibility Target</strong>: Engineered zero-external-API pipeline fallback ensuring automated evaluation executes in under 2 seconds.</li>
+                        <li><strong>Dual-Baseline Benchmark Architecture</strong>: Implemented both a Trivial Majority Baseline (Baseline 0) and Simple Keyword Baseline (Baseline 1) for honest comparison.</li>
+                        <li><strong>Explicit Escalation Rationale Payload</strong>: Configured system to always output a human-readable `escalation_reason` string alongside routing decisions.</li>
+                        <li><strong>Mandatory "Headline Misleading" Analysis</strong>: Included rigorous self-critique section in report examining BLEU limitations and offline evaluation biases.</li>
+                        <li><strong>Standalone Web Server Dashboard</strong>: Built lightweight Flask + Vanilla CSS dashboard for interactive live testing during evaluator review.</li>
+                    </ol>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
