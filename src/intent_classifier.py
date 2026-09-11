@@ -40,8 +40,7 @@ class IntentClassifier:
 
         best_label = max(keyword_scores, key=keyword_scores.get)
         confidence = keyword_scores[best_label]
-        
-        norm_confidence = min(1.0, max(0.3, confidence * 1.8))
+        norm_confidence = min(1.0, confidence * 1.8)
         
         return best_label, round(norm_confidence, 4), keyword_scores
 

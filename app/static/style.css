@@ -437,3 +437,5 @@ textarea:focus {
     padding-left: 0.5rem;
     line-height: 1.6;
 }
+
+.hidden { display: none !important; }
