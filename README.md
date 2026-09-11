@@ -98,11 +98,3 @@ Hiver-SDE-Intern/
 │   └── DECISION_LOG.md                # 12 non-obvious engineering decisions
 ├── run_pipeline.py                    # Single-command execution script
 └── requirements.txt                   # Dependency list
-```
-
----
-
-## 📝 5. Submission Details
-
-- **Submission Form**: [Notion Submission Form](https://intelligent-bar-256.notion.site/39492cbf0da2800682cfc78a600a745f)
-- **Target Role**: Hiver SDE Intern (12 LPA, 2027 Batch)
